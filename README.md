@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Мультиязычное приложение на React + Context API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Summary
 
-## Available Scripts
+Что легче – написать приложение с нуля или доработать начатое другими разработчиками? Часто на этот вопрос нет правильного ответа. Ты должен быть готов и к первому и ко второму.
 
-In the project directory, you can run:
+Перед тобой приложение с поддержкой нескольких языков, которое кто-то начал, но не успел завершить. В нем остались две задачи: доработать кнопки переключения и добавить новый язык.
 
-### `yarn start`
+_[Материал для подготовки к работе с Context API](https://github.com/intocode/docs/tree/main/react-context-api-functions-components)_.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Releases
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Pre-release
 
-### `yarn test`
+Сделай форк и клон данного проекта. Установи зависимости и запусти приложение на своем устройстве.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Изучи внимательно структуру файлов приложения и его код. Хорошо проанализируй Контекст, который присутствует в нем, т.к. в следующем релизе тебе предстоит работа с ним. 
 
-### `yarn build`
+### Release 0
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Отправляйся сразу в компонент `Buttons`. Именно его тебе нужно доработать, чтобы приложение стало рабочим.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Подумай, какие действия внутри этого компонента заставят приложение перерисовать другие компоненты с новыми значениями контекста (с другим языком)?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Не впадай в [аналитический паралич](https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%B0%D1%80%D0%B0%D0%BB%D0%B8%D1%87). Начни писать то решение, которое пришло в голову после пяти-десяти минут раздумий. Только начав писать код ты поймешь правильно было твоё решение или нет. Если даже оно окажется не правильным твоё видение проблемы станет более ясным, чтобы найти новые пути реализации задачи. 
 
-### `yarn eject`
+После текущего релиза приложение должно иметь примерно такой вид:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![](./example.gif)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Сейчас и в будущем старайся декомпозировать общую задачу на более маленькие части. К примеру можно сначала разобраться с тем как вывести правильные названия кнопок, а затем поработать над их функционалом.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Release 1
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Два языка хорошо, а три лучше😜. Добавь в приложение поддержку английского языка. 
 
-## Learn More
+Задача состоит из двух частей:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1) доработать данные контекста, чтобы там были фразы на английском;
+2) добавить третью кнопку для переключения на новый язык.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Сделай новый язык также языком по умолчанию.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Проведи код ревью, примени Prettier, выгрузи проект и сделай pull request.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Теперь можешь немного отдохнуть, ты заслужил :)
