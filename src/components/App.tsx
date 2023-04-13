@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import MainPage from "./MainPage";
-import { LanguageContext, text } from "../context/Language";
+import {
+  Language,
+  LanguageContext,
+  LanguageContextType,
+  text,
+} from "../context/Language";
 
-function App() {
-  const [language, setLanguage] = useState("ru");
+function App(): JSX.Element {
+  const [language, setLanguage] = useState<Language>(Language.RU);
 
-  const toggleLanguage = (value) => {
+  const toggleLanguage = (value: Language): void => {
     setLanguage(value);
   };
 
-  const defaultContextValue = {
+  const defaultContextValue: LanguageContextType = {
     current: language,
     text: text[language],
     toggleLanguage: toggleLanguage,
