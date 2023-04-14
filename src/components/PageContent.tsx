@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
-import { LanguageContext } from '../context/Language'
-import Buttons from './Buttons'
+import React, { useContext } from "react";
+import { LanguageContext } from "../context/Language";
+import Buttons from "./Buttons";
 
-function PageContent () {
+function PageContent() {
   const language = useContext(LanguageContext);
 
   return (
@@ -10,13 +10,11 @@ function PageContent () {
       <div className="display-2 text-secondary mb-3">
         {language.text.welcome}
       </div>
-      <p className="lead">
-        {language.text.appDescription}
-      </p>
+      <p className="lead">{language.text.appDescription}</p>
 
       <Buttons />
     </div>
-  )
+  );
 }
 
 export default PageContent;
