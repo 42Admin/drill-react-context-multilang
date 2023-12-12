@@ -6,11 +6,13 @@ interface LanguageText {
   appDescription: string;
   setToRussian: string;
   setToChechen: string;
+  setToEnglish: string;
 }
 
 export enum Language {
   RU = "ru",
   CHE = "che",
+  ENG = "eng"
 }
 
 export interface LanguageContextType {
@@ -26,6 +28,7 @@ export const text: Record<Language, LanguageText> = {
     appDescription: "Приложение с возможностью смены языка интерфейса",
     setToRussian: "Сменить на русский",
     setToChechen: "Сменить на чеченский",
+    setToEnglish: "Сменить на английский",
   },
   che: {
     welcome: "Марша вогIийла!",
@@ -33,7 +36,16 @@ export const text: Record<Language, LanguageText> = {
     appDescription: "Мотт хийца йиш йолуш йолу приложени",
     setToRussian: "Оьрсийн моттахь",
     setToChechen: "Нохчийн маттахь",
+    setToEnglish: "Ингласан маттахь",
   },
+  eng: {
+    welcome: "Welcome!",
+    title: "Home page",
+    appDescription: "Application with the ability to change the interface language",
+    setToRussian: "Change to Russian",
+    setToChechen: "Change to Chechen",
+    setToEnglish: "Change to English",
+  } 
 };
 
 export const LanguageContext = createContext<LanguageContextType>({
